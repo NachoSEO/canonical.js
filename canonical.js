@@ -5,23 +5,23 @@ for (var i = 0; i < links.length; i ++) {
         canonical = links[i].getAttribute("href")
     }
 };
-var url_absoluta = window.location.href; 
-var url_relativa = window.location.pathname;
+var url_absolute = window.location.href; 
+var url_relative = window.location.pathname;
 if (canonical)
 {
-	if (url_absoluta == canonical || url_relativa == canonical) 
+	if (url_absolute == canonical || url_relative == canonical) 
 	{
-		console.log("La URL " + url_absoluta + " es canónica");
-		alert("La URL " + url_absoluta + " es canónica");
+		console.log(url_absolute + " is the canonical");
+		alert(url_absolute + " is the canonical");
 	}
 	else 
 	{
-		console.log("La URL " + url_absoluta + " NO es canónica, la canónica es " + canonical);
-		alert("La URL " + url_absoluta + " NO es canónica, la canónica es " + canonical);
+		console.log(url_absolute + " is NOT the canonical, the canonical is " + canonical);
+		alert(url_absolute + " is NOT the canonical, the canonical is " + canonical);
 	}
 }
 else 
 {
-	console.log("No existe canonical");
-	alert("No existe canonical");
+	console.log("Canonical tag doesn't exist");
+	alert("Canonical tag doesn't exist");
 };
